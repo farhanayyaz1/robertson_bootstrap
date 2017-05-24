@@ -14,21 +14,31 @@
 * Implements hook_form_FORM_ID_alter().
 */
 function robertson_bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
-  
-  // Add our own vertical tab to base bootstrap settings
+  // Create vertical tabs for all Bootstrap related settings.
   $form['robertson_customizations'] = array(
+    '#type' => 'vertical_tabs',
+    '#attached' => array(
+      'js'  => array(drupal_get_path('theme', 'bootstrap') . '/js/bootstrap.admin.js'),
+    ),
+    '#prefix' => '<h2><small>' . t('Robertson Bootstrap Custom Settings') . '</small></h2>',
+    '#weight' => -10,
+  );
+  // Add our own vertical tab to base bootstrap settings
+  // ThemeDev
+  $form['themedev'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Robertson Specific Customizations'),
-    '#group' => 'bootstrap',
-  );  
-  $form['robertson_customizations']['themedev'] = array(
+    '#title' => t('Development'),
+    '#group' => 'robertson_customizations',
+  );
+  //Container
+  $form['themedev']['container'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Theme development settings'),
+    '#title' => t('Container'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
-  // Development Mode Settings (see settings[rebuild_registry] in .info)
-  $form['robertson_customizations']['themedev']['rebuild_registry'] = array(
+   // Development Mode Settings (see settings[rebuild_registry] in .info)
+  $form['themedev']['container']['rebuild_registry'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Rebuild theme registry on every page.'),
     '#default_value' => theme_get_setting('rebuild_registry'),
