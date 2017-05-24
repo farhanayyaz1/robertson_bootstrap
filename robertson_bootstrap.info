@@ -4,9 +4,9 @@ core = 7.x
 base theme = bootstrap
 
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Regions
-;;;;;;;;;;;;;;;;;;;;;
+; ========================================
+; Regions
+; ========================================
 
 regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
@@ -20,16 +20,16 @@ regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Stylesheets
-;;;;;;;;;;;;;;;;;;;;;
+; ========================================
+; Stylesheets
+; ========================================
 
 ;stylesheets[all][] = css/style.css
 
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Scripts
-;;;;;;;;;;;;;;;;;;;;;
+; ========================================
+; Scripts
+; ========================================
 
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/affix.js'
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/alert.js'
@@ -44,5 +44,24 @@ regions[page_bottom]    = 'Page bottom'
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/tab.js'
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/transition.js'
 
+; ========================================
+; Settings
+; ========================================
+
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''
+
+; Default is false (disabled), when enabled (true) development mode is turned on and theme registry is not cached
+settings[rebuild_registry] = 0
+
+
+
+; ========================================
+; Other
+; ========================================
+
+; This section usually populated by drupal.org build script. Using the version and core values for our display purposes.
+version = "7.x-0.01"
+core = "7.x"
+;project = "robertson_bootstrap"
+;datestamp = "1490720907"
