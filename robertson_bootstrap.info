@@ -48,8 +48,8 @@ regions[page_bottom]    = 'Page bottom'
 ; Settings
 ; ========================================
 
-; Disable the CDN provider so compiled source files can be used.
-settings[bootstrap_cdn] = ''
+; Enable the CDN provider so compiled source files can be used.
+settings[bootstrap_cdn] = 'jsDelivr'
 
 ; Default is false (disabled), when enabled (true) development mode is turned on and theme registry is not cached
 settings[rebuild_registry] = 0
