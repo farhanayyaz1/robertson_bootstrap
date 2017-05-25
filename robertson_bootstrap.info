@@ -54,6 +54,9 @@ settings[bootstrap_cdn] = 'jsDelivr'
 ; Default is false (disabled), when enabled (true) development mode is turned on and theme registry is not cached
 settings[rebuild_registry] = 0
 
+; Body ID field to help multi-site/multi-tenant usage of the theme
+setting[body_id] = ' '
+
 
 
 ; ========================================

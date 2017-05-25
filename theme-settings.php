@@ -51,4 +51,17 @@ function robertson_bootstrap_form_system_theme_settings_alter(&$form, $form_stat
     '#default_value' => theme_get_setting('rebuild_registry'),
     '#description'   => t('During theme development, it can be very useful to continuously <a href="https://drupal.org/node/173880#theme-registry">rebuild the theme registry</a>. <br /> <div class="alert alert-warning messages warning"><b>WARNING</b>: this is a huge performance penalty and must be turned off on production websites.</div>'),
   );
+  
+  $form['themedev']['body_id_0'] = array(
+    '#type'        => 'fieldset',
+    '#title'       => t('Unique Body ID'),
+    '#collapsible' => TRUE,
+    '#collapsed'   => TRUE,
+  );
+  $form['themedev']['body_id_0']['body_id'] = array(
+    '#type'          => 'textfield',
+    '#title'         => t('Unique Body ID'),
+    '#default_value' => theme_get_setting('body_id'),
+    '#description'   => t('For multi-site/multi-tenent configuration. Set a unique body id class value.'),
+  );
 }
