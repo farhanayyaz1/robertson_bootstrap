@@ -58,7 +58,6 @@
 <head>
   <link rel="profile" href="<?php print $grddl_profile; ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robertson" content="robertson">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
@@ -68,7 +67,7 @@
   <![endif]-->
   <?php print $scripts; ?>
 </head>
-<body id="<?php print $body_id ?>" <?php print $body_attributes; ?>>
+<body id="<?php print $body_id; ?>" <?php print $body_attributes; ?>>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 	<a href="#search-block-form" class="element-invisible element-focusable"><?php print t('Skip to search') ?></a>
