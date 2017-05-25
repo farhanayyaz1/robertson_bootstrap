@@ -58,7 +58,6 @@ function robertson_bootstrap_preprocess_html(&$vars) {
   }
 
   // Add a unique page id
-  //$vars['body_id'] = 'pid-' . strtolower(preg_replace('/[^a-zA-Z0-9-]+/', '-', drupal_get_path_alias(check_plain($_GET['q']))));
   $vars['body_id'] = theme_get_setting('body_id');
 
 /**

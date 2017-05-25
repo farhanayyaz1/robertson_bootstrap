@@ -3,7 +3,8 @@
  * @file
  * template-settings.php
  *
- * The Theme Settings file for this theme, exposes settings values to admin gui
+ * The Theme Settings file for the Robertson Bootstrap theme, exposes settings values to admin gui at 
+ *     admin/appearance/settings/robertson_bootstrap
  */
 
 /**
@@ -62,6 +63,6 @@ function robertson_bootstrap_form_system_theme_settings_alter(&$form, $form_stat
     '#type'          => 'textfield',
     '#title'         => t('Unique Body ID'),
     '#default_value' => theme_get_setting('body_id'),
-    '#description'   => t('For multi-site/multi-tenent configuration. Set a unique body id class value.'),
+    '#description'   => t('For multi-site/multi-tenent configuration. Set a unique body id class value.<br /> <div class="alert alert-warning messages warning">It is best to not use a value that has spaced in it. Use dashes or underscores instead.</div>'),
   );
 }
