@@ -73,11 +73,6 @@
 	<a href="#search-block-form" class="element-invisible element-focusable"><?php print t('Skip to search') ?></a>
   </div>
   <?php print $page_top; ?>
-  <div class="<?php print $container_class; ?>">
-    <?php if (!empty($site_jumbotron)): ?>
-      <p class="jumbotron"><?php print render($site_jumbotron); ?></p>
-    <?php endif; ?>
-  </div>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 </body>
