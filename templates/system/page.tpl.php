@@ -73,12 +73,12 @@
  * @ingroup templates
  */
 ?>
-
-  <?php if (!empty($site_jumbotron)): ?>
-    <div class="jumbotron"><?php print render($site_jumbotron); ?></div>
-  <?php endif; ?>
-
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+  <?php if (!empty($page['site_jumbotron'])): ?>
+    <div class="jumbotron"
+      <?php print render($page['site_jumbotron']); ?>
+    </div>
+  <?php endif; ?>
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
       <?php if ($logo): ?>
