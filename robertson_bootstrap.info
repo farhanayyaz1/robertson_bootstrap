@@ -1,13 +1,14 @@
-name = 'Robertson Bootstrap'
-description = 'Custom Sub-Theme based on the Bootstrap Framework Sass source files and must be compiled.'
-core = 7.x
-base theme = bootstrap
-
+name		= 'Robertson Bootstrap'
+description	= 'Custom Sub-Theme based on the Bootstrap Framework.'
+core		= 7.x
+base theme	= bootstrap
 
 ; ========================================
 ; Regions
 ; ========================================
 
+regions[page_top]       = 'Page top'
+regions[site_jumbotron]	= 'Site Jumbotron'
 regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
@@ -16,16 +17,13 @@ regions[content]        = 'Content'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
-regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
-
 
 ; ========================================
 ; Stylesheets
 ; ========================================
 
-;stylesheets[all][] = css/style.css
-
+stylesheets[all][] = css/style.css
 
 ; ========================================
 ; Scripts
@@ -56,8 +54,6 @@ settings[rebuild_registry] = 0
 
 ; Body ID field to help multi-site/multi-tenant usage of the theme
 setting[body_id] = ' '
-
-
 
 ; ========================================
 ; Other
