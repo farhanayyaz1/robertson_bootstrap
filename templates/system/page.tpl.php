@@ -74,13 +74,13 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+  <?php if (!empty($page['site_jumbotron'])): ?>
+    <div class="jumbotron"
+      <?php print render($page['site_jumbotron']); ?>
+    </div>
+  <?php endif; ?>
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
-      <?php if (!empty($page['site_jumbotron'])): ?>
-        <div class="jumbotron"
-          <?php print render($page['site_jumbotron']); ?>
-        </div>
-      <?php endif; ?>
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
